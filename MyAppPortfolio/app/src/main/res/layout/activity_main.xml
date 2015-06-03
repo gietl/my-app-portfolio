@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/main_title"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/spotify_button_text"
+        android:id="@+id/spotifyButton"
+        android:layout_marginTop="25dp"
+        android:minWidth="250dp"
+        android:singleLine="false"
+        android:onClick="spotifyMessage"
+        android:background="#03A9F4"
+        android:layout_below="@+id/textView"
+        android:layout_alignLeft="@+id/scoresButton"
+        android:layout_alignStart="@+id/scoresButton"
+        android:layout_marginBottom="10dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/scores_button_text"
+        android:id="@+id/scoresButton"
+        android:layout_below="@+id/spotifyButton"
+        android:layout_centerHorizontal="true"
+        android:minWidth="250dp"
+        android:onClick="scoresMessage"
+        android:background="#03A9F4"
+        android:layout_marginBottom="10dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/libary_button_text"
+        android:id="@+id/libraryButton"
+        android:layout_centerHorizontal="true"
+        android:minWidth="250dp"
+        android:onClick="libraryMessage"
+        android:layout_below="@+id/scoresButton"
+        android:background="#03A9F4"
+        android:layout_marginBottom="10dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/build_button_text"
+        android:id="@+id/bibButton"
+        android:layout_below="@+id/libraryButton"
+        android:layout_centerHorizontal="true"
+        android:minWidth="250dp"
+        android:onClick="buildMessage"
+        android:background="#03A9F4"
+        android:layout_marginBottom="10dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/xyz_button_text"
+        android:id="@+id/xyzButton"
+        android:layout_below="@+id/bibButton"
+        android:layout_centerHorizontal="true"
+        android:minWidth="250dp"
+        android:onClick="xyzMessage"
+        android:background="#03A9F4"
+        android:layout_marginBottom="10dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/capstone_button_text"
+        android:id="@+id/capstoneButton"
+        android:minWidth="250dp"
+        android:onClick="capstoneMessage"
+        android:layout_below="@+id/xyzButton"
+        android:layout_alignLeft="@+id/xyzButton"
+        android:layout_alignStart="@+id/xyzButton"
+        android:background="#FF5252" />
+</RelativeLayout>
