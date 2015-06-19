@@ -1,8 +1,9 @@
 package com.jaygietl.android.myappportfolio;
 
 import android.content.Context;
-import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -48,9 +49,21 @@ public class MainActivity extends ActionBarActivity {
         Toast.makeText(context, text, duration).show();
     }
 
+    private void getLaunchToast( String appName )
+    {
+        Context context = getApplicationContext();
+        int duration = Toast.LENGTH_SHORT;
+        CharSequence text = "Launching my " + appName + " app!";
+
+        Toast.makeText(context, text, duration).show();
+    }
+
     public void spotifyMessage(View view) {
 
-        showAppNameToastMessage("spotify streamer");
+        Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.jaygietl.android.spotifystreamer");
+        startActivity(launchIntent);
+
+        getLaunchToast("spotify streamer");
 
     }
 
